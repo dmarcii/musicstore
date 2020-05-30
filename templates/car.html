@@ -1,0 +1,25 @@
+{% extends 'layout.html'%}
+{%block body%}
+
+<div class="row row-cols-1 row-cols-md-4">
+    {% for ca in car %}
+    <div class="col mb-2">
+      <div class="card">
+        <div class="col-md-4">  
+         <img src= "{{ca.4}}" class="card-img" width="200" height="100" >
+        </div>
+        <div class="card-body">
+          <tr>
+            <td><h5 class="card-title">{{ca.1}}</h5></td>
+            <td><p class="card-text"> marca: {{ca.2}}</p></td>
+            <td><p class="card-text">precio: {{ca.3}}$<small class="text-muted"></small></p></td>
+            <td> <a href="/" class="btn btn-outline-danger">Eliminar</a></td>
+          </tr>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+{%endblock%}

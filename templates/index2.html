@@ -1,0 +1,140 @@
+{% extends 'layout.html'%}
+{%block body%}
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"> Marci Music Store</a>
+    
+<!--  1 -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/showinstruments2" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Guitarras
+            </a>    
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/showinstruments2/electric_guitar">Electricas</a>
+            <a class="dropdown-item" href="/showinstruments2/acoustic_guitar">Acusticas</a>
+            <a class="dropdown-item" href="#">Electoacusticas</a>
+        </div> 
+      </li> 
+    </ul> 
+      </div> 
+
+<!--  2 -->
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Bajos
+                  </a>       
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <!--<a class="dropdown-item" href="/showinstruments">Guitarras</a>-->
+                  <a class="dropdown-item" href="#">Teclados</a>
+                  <a class="dropdown-item" href="#">Bajos</a>
+              </div>  
+        </li>
+      </ul>
+      </div> 
+<!--  3 -->    
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Teclados
+                  </a>       
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <!--<a class="dropdown-item" href="/showinstruments">Guitarras</a>-->
+                  <a class="dropdown-item" href="#">Teclados</a>
+                  <a class="dropdown-item" href="#">Bajos</a>
+              </div>  
+        </li>
+      </ul>
+      </div> 
+
+<!--  4 -->    
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Baterias
+          </a>       
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="/showinstruments">Guitarras</a>-->
+          <a class="dropdown-item" href="#">Teclados</a>
+          <a class="dropdown-item" href="#">Bajos</a>
+      </div>  
+</li>
+</ul>
+</div> 
+
+<!--  5 -->    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Accesorios
+          </a>       
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="/showinstruments">Guitarras</a>-->
+          <a class="dropdown-item" href="#">Teclados</a>
+          <a class="dropdown-item" href="#">Bajos</a>
+      </div>  
+</li>
+      </ul>
+</div>
+
+
+      <div class = 'nav-item'>
+  <a href="/login" class = "btn btn-primary btn-block">Entrar</a>
+</div>
+<div class = 'nav-item'>
+  <a href="/signup" class = "btn btn-secondary btn-block">Registrarse</a>
+</div>
+ 
+  </nav>  
+
+  <p></p>
+  <p></p>
+
+<!--Tareta de los instrumentos-->
+<div class="row row-cols-1 row-cols-md-4">
+  {% for guitar in electric_guitar %}
+  <div class="col mb-2">
+    <div class="card">
+      <div class="col-md-4">  
+        <img src= "{{guitar.4}}" class="card-img" width="200" height="100" >
+      </div>
+      <div class="card-body">
+        <tr>
+          <td><h5 class="card-title">{{guitar.1}}</h5></td>
+          <td><p class="card-text"> marca: {{guitar.2}}</p></td>
+          <td><p class="card-text">precio: {{guitar.3}}$<small class="text-muted"></small></p></td>
+        </tr>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+{%endblock%}
+

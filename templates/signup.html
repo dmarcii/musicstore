@@ -1,0 +1,128 @@
+{% extends 'layout.html' %} {%block body%}
+
+{% with messages = get_flashed_messages() %} {% if messages%} {% for
+  message in messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{message}}</strong>
+    <button
+      type="button"
+      class="close"
+      data-dismiss="alert"
+      aria-label="Close"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {%endfor%} {%endif %} {%endwith%}
+
+    <form action="/signup" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Nombre de usuario</label>
+          <input type="text" class="form-control" id="inputEmail4">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Contraseña</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Primer Nombre</label>
+          <input type="text" class="form-control" id="inputEmail4">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Segundo Nombre</label>
+          <input type="text" class="form-control" id="inputPassword4">
+        </div>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputAddress">Correo Electronico</label>
+        <input type="email" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputAddress">Numero de telefono</label>
+        <input type="number" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+
+      <div class="form-group col-md-8">
+        <label for="inputAddress2">Direccion</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputCity">Pais</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">Fecha de nacimiento</label>
+          <select id="inputState" class="form-control">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+      </div>
+     
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Registrarse</button>
+    </form>
+
+
+    {%endblock%}
+
+
+    <!--
+
+      
+<div class="row">
+    <div class="col-md5">
+      <div class="card card-body">
+        {% with messages = get_flashed_messages() %} {% if messages%} {% for
+        message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{message}}</strong>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {%endfor%} {%endif %} {%endwith%}
+  
+        <form action="/signup" method="POST">
+          <p> Informacion de usuario</p>
+          <div class="form-group">
+              <input type="text" name="username" placeholder="Nombre de usuario" class = "form-control" />
+          </div>
+  
+          <div class="form-group"></div>
+              <input type="text" name="password" placeholder="Contraseña" class = "form-control" />
+          </div>
+  
+          <div class="form-group">
+              <input type="text" name="email" placeholder="Correo" class = "form-control" />
+          </div>
+  
+          <div class="form-group">
+              <button type="submit" class = "btn btn-primary btn-block"> Registrarse </button>
+          </div>       
+        </form>
+      </div>
+    </div>
+
+
+    -->

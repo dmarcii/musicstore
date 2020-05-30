@@ -1,6 +1,7 @@
 {% extends 'layout.html' %} {%block body%}
 {% with messages = get_flashed_messages() %} {% if messages%} {% for
   message in messages %}
+  <p></p>
   <div class="alert alert-success alert-dismissible fade show" role="alert">
     <strong>{{message}}</strong>
     <button

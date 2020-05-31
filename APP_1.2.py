@@ -135,16 +135,32 @@ def index2():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        #email = request.form['email']
-        cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO userlog (username_userlog, password_userlog) VALUES (%s, %s)',
-                    (username, password))
-        mysql.connection.commit()
-        flash('Usuario Añadido exitosamente!')
+        username = request.form["username"]
+        password = request.form["password"]
+        fistname = request.form["firstname"]
+        lastname = request.form["lastname"]
+        email = request.form["email"]
+        phone = request.form["phone"]
+        adress = request.form["address"]
+        country = request.form["country"]
+        dateofbirth = request.form["dateofbirth"]
+        zip = request.form["zip"]
 
+        print(username, password, fistname, lastname, email, phone, adress, country, dateofbirth, zip)
+
+        #cur = mysql.connection.cursor()
+        #cur.execute('INSERT INTO userlog (username_userlog, password_userlog) VALUES (%s, %s)',
+        #            (username, password))
+        #mysql.connection.commit()
+        flash('Usuario Añadido exitosamente!')
     return render_template('signup.html')
+
+
+
+
+
+
+
 
 @app.route('/showinstruments/<string:tipo>/', methods=['GET', 'POST'])
 def show(tipo):

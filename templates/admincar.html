@@ -28,6 +28,8 @@
         <td><h4>Precio</h4></td>
         <td><h4>Stock</h4></td>
         <td><h4>Cantidad</h4></td>
+        <td><h4>Estado</h4></td>
+        <td><h4>idusuario</h4></td>
         <td><h4>Operaciones</h4></td>
       </tr>
     </thead>
@@ -41,6 +43,9 @@
         <td id="precio"><h5>{{ca.3}}$</h5></td> 
         <td><h5>{{ca.7}}</h5></td>
         <td><h5>{{ca.10}}</h5></td>
+        <td><h5>{{ca.11}}</h5></td>
+        <td><h5>{{ca.9}}</h5></td>
+
         <td><h5><a href="/cardelete/{{ca.0}}" class="btn btn-danger">Eliminar</a></h5></td>
       </tr>    
       {% endfor %}
@@ -50,7 +55,6 @@
       <td><h4>{{iva}}$</h4></td>
       <td><h4>total:</h4></td>
       <td><h4>{{totaliva}}$</h4></td>
-      <td> <button type="submit" class="btn btn-primary btn-lg">Efectuar cancelacion</button><td>
     </tbody>
   </table>
 </div>

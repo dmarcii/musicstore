@@ -49,13 +49,13 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="/showinstruments" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Teclados
                   </a>       
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <!--<a class="dropdown-item" href="/showinstruments">Guitarras</a>-->
-                  <a class="dropdown-item" href="#">Teclados</a>
-                  <a class="dropdown-item" href="#">Bajos</a>
+                  <a class="dropdown-item" href="/showinstruments/88keys">88 Teclas</a>
+                  <a class="dropdown-item" href="#">69 Teclas</a>
               </div>  
         </li>
         
@@ -146,14 +146,18 @@
   <div class="col mb-2">
     <div class="card">
       <div class="col-md-4">  
-        <img src= "{{guitar.4}}" class="card-img" width="200" height="100" >
+        <img src= "{{guitar.4}}" class="card-img" width="250" height="100" >
       </div>
       <div class="card-body">
         <tr>
           <td><h5 class="card-title">{{guitar.1}}</h5></td>
           <td><p class="card-text"> marca: {{guitar.2}}</p></td>
           <td><p class="card-text">precio: {{guitar.3}}$<small class="text-muted"></small></p></td>
-          <td> <a href="/addtocar/{{guitar.0}}" class="btn btn-outline-danger">Añadir al carrito</a></td>
+          <td><p class="card-text">Stock: {{guitar.7}}<small class="text-muted"></small></p></td>
+          <form action="/addtocar/{{guitar.0}}" method="POST">
+            <td><input type="number" name="quantity" min="1" max= "{{guitar.7}}" placeholder="0"></td>
+            <td> <button type= "submit" class="btn btn-outline-danger" placeholder = "Añadir al carrito">Anadir al Carrito</button></td>
+          </form>
         </tr>
       </div>
     </div>

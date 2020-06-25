@@ -19,7 +19,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/showinstruments/electric_guitar">Electricas</a>
             <a class="dropdown-item" href="/showinstruments/acoustic_guitar">Acusticas</a>
-            <a class="dropdown-item" href="#">Electoacusticas</a>
+            <a class="dropdown-item" href="/showinstruments/electroacoustic_guitar">Electoacusticas</a>
         </div>  
 
 <!--  2 -->
@@ -36,8 +36,9 @@
                   </a>       
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <!--<a class="dropdown-item" href="/showinstruments">Guitarras</a>-->
-                  <a class="dropdown-item" href="#">Teclados</a>
-                  <a class="dropdown-item" href="#">Bajos</a>
+                  <a class="dropdown-item" href="/showinstruments/electric_bass">Bajos Electricos</a>
+                  <a class="dropdown-item" href="/showinstruments/acoustic_bass">Bajos acusticos</a>
+                  <a class="dropdown-item" href="/showinstruments/fretless">Bajos fretless</a>
               </div>  
         </li>
 
@@ -55,7 +56,10 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <!--<a class="dropdown-item" href="/showinstruments">Guitarras</a>-->
                   <a class="dropdown-item" href="/showinstruments/88keys">88 Teclas</a>
-                  <a class="dropdown-item" href="#">69 Teclas</a>
+                  <a class="dropdown-item" href="/showinstruments/69keys">69 Teclas</a>
+                  <a class="dropdown-item" href="/showinstruments/49keys">49 Teclas</a>
+                  <a class="dropdown-item" href="/showinstruments/Synth"> Sintetizadores</a>
+                  <a class="dropdown-item" href="/showinstruments/organ">Organos</a>
               </div>  
         </li>
         
@@ -72,9 +76,10 @@
             Baterias
           </a>       
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <!--<a class="dropdown-item" href="/showinstruments">Guitarras</a>-->
-          <a class="dropdown-item" href="#">Teclados</a>
-          <a class="dropdown-item" href="#">Bajos</a>
+          <a class="dropdown-item" href="/showinstruments/4piecesdrums">4 piezas</a>
+          <a class="dropdown-item" href="/showinstruments/5piecesdrums">5 piezas</a>
+          <a class="dropdown-item" href="/showinstruments/8piecesdrums">8 piezas</a>
+          <a class="dropdown-item" href="/showinstruments/electric_drums">Baterias electricas</a>
       </div>  
 </li>
 
@@ -92,10 +97,25 @@
           </a>       
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <!--<a class="dropdown-item" href="/showinstruments">Guitarras</a>-->
-          <a class="dropdown-item" href="#">Teclados</a>
-          <a class="dropdown-item" href="#">Bajos</a>
+          <a class="dropdown-item" href="/showinstruments/cables">Cables</a>
+          <a class="dropdown-item" href="/showinstruments/tuners">Afinadores</a>
+          <a class="dropdown-item" href="/showinstruments/guitarstrings">Cuerdas de guitarra</a>
+          <a class="dropdown-item" href="/showinstruments/bass_strings">Cuerdas de bajo</a>
+          <a class="dropdown-item" href="/showinstruments/picks">Pajuelas</a>
+          <a class="dropdown-item" href="/showinstruments/headphones">Audifonos</a>
+          <a class="dropdown-item" href="/showinstruments/instrument_cases">forros para instrumentos</a>
+          <a class="dropdown-item" href="/showinstruments/stands">Parales</a>
+          <a class="dropdown-item" href="/showinstruments/interfaces_de_audio">interfaces de audio</a>
       </div>  
 </li>
+</li>
+
+<li class="nav-item">
+
+<form action="/profilesearch" method="POST" class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" name = "search" id ="search" type="text" placeholder="Buscar...">
+  <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar</button>
+</form>
 </li>
 
 
@@ -146,7 +166,7 @@
   <div class="col mb-2">
     <div class="card">
       <div class="col-md-4">  
-        <img src= "{{guitar.4}}" class="card-img" width="250" height="100" >
+        <img src= "{{guitar.4}}" class="card-img" width="250" height="100">
       </div>
       <div class="card-body">
         <tr>
@@ -166,6 +186,159 @@
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Marci Music store</h5>
+        <p>Nuestra pasion es ayudarte a conseguir tu instrumento soñado.</p>
+        <p>Nos destacamos por nuestro profesionalismo y buenos precios, envios a todas partes del pais</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Acerca de</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <a href="#!">PROJECTOS</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!">NOSOTROS</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!">BLOG</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!">RECONOCIMIENTOS</a>
+            </p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Direccion</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Siguenos</h5>
+
+        <!-- Facebook -->
+        <a type="button" class="btn-floating btn-fb">
+          <i class="fab fa-facebook-f">
+            <img src= "https://i.postimg.cc/WbtZSWgz/facebook-icon.png" alt="" height="35" width="35">
+          </i>
+        </a>
+        <!-- Twitter -->
+        <a type="button" class="btn-floating btn-tw">
+          <i class="fab fa-twitter">
+            <img src= "https://i.postimg.cc/pXBf1h1c/twitter-squared1.png" alt="" height="50" width="50">
+          </i>
+        </a>
+        <!-- Google +-->
+        <a type="button" class="btn-floating btn-gplus">
+          <i class="fab fa-google-plus-g">
+            <img src= "https://i.postimg.cc/TPyG4bQr/instagram-icon.jpg" alt="" height="50" width="50">
+          </i>
+        </a>
+        <!-- Dribbble -->
+        <a type="button" class="btn-floating btn-dribbble">
+          <i class="fab fa-dribbble"></i>
+        </a>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> marcimusicstore.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 
 

@@ -1,0 +1,17 @@
+CREATE TABLE `store1`.`instruments` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `model` VARCHAR(45) NOT NULL,
+  `brand` VARCHAR(45) NOT NULL,
+  `price` DECIMAL(10) NOT NULL,
+  `photo` VARCHAR(90) NOT NULL,
+  `type` INT NOT NULL,
+  `tipo` VARCHAR(45) NOT NULL,
+  `stock` INT NOT NULL,
+  `hash` BIGINT NOT NULL,
+  `tabla` VARCHAR(45) NOT NULL,
+  `state` INT NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+
+INSERT INTO instruments (model, brand, price, photo, type, tipo, stock, hash, tabla, state) SELECT model, brand, price, photo, type, tipo, stock, hash, tabla, state FROM electric_guitar;

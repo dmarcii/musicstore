@@ -2,7 +2,26 @@
 
 {%block body%}
 
-    <form action="/login" method="POST">
+{% with messages = get_flashed_messages() %} {% if messages%} {% for
+  message in messages %}
+  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+    <strong>{{message}}</strong>
+    <button
+      type="button"
+      class="close"
+      data-dismiss="alert"
+      aria-label="Close"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  {%endfor%} {%endif %} {%endwith%}
+
+
+
+
+    <form action="/adminlogin" method="POST">
         <div class="form-row align-items-center">
           <div class="col-auto">
             <label class="sr-only" for="inlineFormInput">Administrador</label>
@@ -27,7 +46,7 @@
               <div class="input-group-prepend">
                 <div class="input-group-text">Clave especial</div>
               </div>
-              <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="clave especial" name = 'clave_especial'>
+              <input type="password" class="form-control" id="special_key" placeholder="clave especial" name = "special_key">
             </div>
           </div>
 
@@ -37,6 +56,9 @@
           </div>
         </div>
       </form>
+
+
+      <a href="/adminsignup" class="btn btn-primary mb-2">Registrar un nuevo Administrador</a>
 
 
       

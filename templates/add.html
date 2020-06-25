@@ -1,0 +1,89 @@
+{% extends 'layout.html'%}
+
+{%block body%}
+
+{% with messages = get_flashed_messages() %} {% if messages%} {% for
+  message in messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{message}}</strong>
+    <button
+      type="button"
+      class="close"
+      data-dismiss="alert"
+      aria-label="Close"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  {%endfor%} {%endif %} {%endwith%}
+  
+
+<form action="/add" method="POST">
+    
+<div class="col-md7">
+    <table class="table table-striped table-botdered bg-white table-sm">
+      <thead>
+        <tr>
+          <td><h4>Foto</h4></td>
+          <td><h4>Modelo</h4></td>
+          <td><h4>Marca</h4></td>
+          <td><h4>Precio</h4></td>
+          <td><h4>Stock</h4></td>
+          <td><h4>categoria</h4></td>
+        </tr>
+      </thead>
+  
+      <tbody>
+        
+        <tr>
+          <td><input type= "url" name="photo" id="photo"></td>
+          <td><h5 class="card-title"><input type="text" name="model" id="model"></h5></td>
+          <td><h5><input type="text" name="brand" id="brand"></h5></td>
+          <td id="precio"><h5><input type="number" min = '1' name="price" id="price"></h5></td> 
+          <td><h5><input type="number" min = '1' name="stock" id="stock" ></h5></td>
+          <td><h6>
+            <select name="categoria" id="categoria">
+                <option value="electric_guitar">Guitarra electrica</option>
+                <option value="acoustic_guitar">Guitarra acustica</option>
+                <option value="electroacoustic_guitar">Guitarra electroacustica</option>
+
+                <option value="electric_bass">Bajo electrico</option>
+                <option value="acoustic_bass">Bajo Acusctico</option>
+                <option value="fretless">Bajo fretless</option>
+
+                <option value="49keys"> teclado 49 teclas</option>
+                <option value="69keys">teclado 69 teclas</option>
+                <option value="88keys">teclado 88 teclas</option>
+                <option value="Synth">Sintetizador</option>
+                <option value="organ">Organos</option>
+
+                <option value="4piecesdrums">Bateria de 4 piezas</option>
+                <option value="5piecesdrums">Bateria de 5 piezas</option>
+                <option value="8piecesdrums">Bateria de 8 piezas</option>
+                <option value="electric_drums">Bateria electrica</option>
+
+                <option value="cables">cables</option>
+                <option value="picks">pajuelas</option>
+                <option value="headphones"> Audifonos</option>
+                <option value="instrument_cases">Estuches para instrumentos</option>
+                <option value="guitarstrings">Cuerdas de guitarra</option>
+                <option value="bass_strings">Cuerdas de Bajo</option>
+                <option value="tuners">Afinadores</option>
+                <option value="stands"> Parales</option>
+                <option value="interfaces_de_audio">Interfaces de audio</option>
+
+
+              </select>
+
+          </h6></td>
+        </tr>    
+      </tbody>
+    </table>
+  </div>
+  <button type="submit" class="btn btn-primary btn-lg">Añadir</button>
+  
+</form>
+
+
+{%endblock%}

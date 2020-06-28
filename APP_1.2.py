@@ -478,7 +478,7 @@ def edit(id):
         stock = request.form['stock']
         cur = mysql.connection.cursor()
 
-        cur.execute('UPDATE '+ ti + ' SET photo = "'+ photo + '"' + ', model = "' + model + '"' + ', brand = "' + brand + '"' + ', price = "' + str(price) + '"' + ', stock = "' + str(stock) + '"' + ' WHERE id = 1')
+        cur.execute('UPDATE '+ ti + ' SET photo = "'+ photo + '"' + ', model = "' + model + '"' + ', brand = "' + brand + '"' + ', price = "' + str(price) + '"' + ', stock = "' + str(stock) + '"' + ' WHERE id = ' + id)
         flash('Producto editado satisfactoriamente!!')
         mysql.connection.commit()
         return redirect(url_for('adminprofile'))

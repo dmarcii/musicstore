@@ -57,6 +57,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-info">
   <h5 class="navbar-brand"> Solicitudes de Reembolso</h5>
 </nav>
+
 {% for i in invoices %}
 {% if i.8 == 1%}
 
@@ -78,6 +79,55 @@
     <td><h5><a href="/aprov/{{i.0}}" class="btn btn-success">Aprobar reembolso</a></h5></td>
     {% endif %}
     {% endfor %}
+    </tr>
+  </tbody>
+
+</div>
+
+
+
+<p></p>
+<p></p>
+<p></p>
+
+    
+
+<div class="col-md7">
+  <table class="table table-striped table-botdered bg-white table-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <h5 class="navbar-brand"> Facturas en 30 dias</h5>
+    </nav>
+    <thead>
+      <tr>
+        <td><h4>Hash</h4></td>
+        <td><h4>Nombre</h4></td>
+        <td><h4>fecha de expedicion</h4></td>
+        <td><h4>fecha de vencimiento</h4></td>
+        <td><h4>Monto</h4></td>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for i in mes %}
+      <tr>
+        <td><h5>{{i.1}}</h5></td>
+        <td><h5>{{i.3}} {{i.4}}</h5></td> 
+        <td><h5>{{i.5}}</h5></td>
+        <td><h5>{{i.6}}</h5></td>
+        <td><h5>{{i.7}}$</h5></td>
+
+      </tr>    
+      {% endfor %}
+    </tbody>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><h4>Total vendido: {{t}}$ </h4> </td>
+  </table>
+</div>
+
+
 
 
 {%endblock%}

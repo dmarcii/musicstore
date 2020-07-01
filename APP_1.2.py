@@ -593,7 +593,17 @@ def inv():
     cur.execute('SELECT * FROM invoices WHERE devolution = 1')
     invoices = cur.fetchall()
 
-    return render_template('inv.html', invoices = invoices, inv = inv)
+    cur.execute('''SELECT * FROM invoices WHERE expedate > NOW() - INTERVAL 30 DAY
+                AND expedate < NOW() + INTERVAL 30 DAY AND devolution = 0 ''')
+
+    mes = cur.fetchall()
+
+    cont2 = 0.0
+    for x in mes:
+        cont2 = cont2 + (float(x[7]))
+   
+
+    return render_template('inv.html', invoices = invoices, inv = inv, mes = mes, t =cont2)
 
 
 @app.route('/invsearch', methods=['GET', 'POST'])
@@ -646,6 +656,7 @@ def add():
 
         return render_template('/add.html')
     return render_template('/add.html')
+
 
 
 
